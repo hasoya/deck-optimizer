@@ -24,11 +24,12 @@
 			"All"
 		],
 		"python.formatting.autopep8Args": [
-			"--max-line-length=200"
+			"--max-line-length=127"
 		],
 		"python.linting.pylintEnabled": false,
 		"python.linting.flake8Args": [
-			"--max-line-length=200"
+			"--max-line-length=127",
+			"--max-complexity=10"
 		],
 		"python.linting.flake8Enabled": true,
 		"python.linting.mypyEnabled": true,
