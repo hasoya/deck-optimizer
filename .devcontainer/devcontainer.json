@@ -1,0 +1,49 @@
+{
+	"name": "DeckOptimizer",
+	"context": "..",
+	"dockerFile": "Dockerfile",
+	"postCreateCommand": "pip install -e .",
+	// Use 'settings' to set *default* container specific settings.json values on container create. 
+	// You can edit these settings after create using File > Preferences > Settings > Remote.
+	"settings": {
+		"autoDocstring.docstringFormat": "sphinx",
+		"autoDocstring.guessTypes": true,
+		"editor.codeActionsOnSave": {
+			"source.organizeImports": true
+		},
+		"editor.formatOnSave": true,
+		"editor.suggestSelection": "first",
+		"git.autofetch": true,
+		"git.confirmSync": false,
+		"pylance.insidersChannel": "daily",
+		"python.analysis.typeCheckingMode": "basic",
+		"python.analysis.extraPaths": [
+			"./dopt"
+		],
+		"python.experiments.optInto": [
+			"All"
+		],
+		"python.formatting.autopep8Args": [
+			"--max-line-length=200"
+		],
+		"python.linting.pylintEnabled": false,
+		"python.linting.flake8Args": [
+			"--max-line-length=200"
+		],
+		"python.linting.flake8Enabled": true,
+		"python.linting.mypyEnabled": true,
+		"python.testing.pytestArgs": [
+			"tests"
+		],
+		"python.testing.pytestEnabled": true,
+		"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
+	},
+	// Add the IDs of extensions you want installed when the container is created in the array below.
+	"extensions": [
+		"ms-python.python",
+		"njpwerner.autodocstring",
+		"ms-azuretools.vscode-docker",
+		"redhat.vscode-yaml",
+		"visualstudioexptteam.vscodeintellicode",
+	]
+}

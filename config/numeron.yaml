@@ -1,0 +1,35 @@
+num_hand: 6
+num_deck:
+  min: 40
+  max: 60
+condition:
+  - name: Hand Trap
+    min: 6
+    max: 20
+    require: 2
+    exact: False
+    in_hand: True
+  - name: Initial
+    min: 1
+    max: 12
+    require: 1
+    exact: False
+    in_hand: True
+  - name: Counter
+    min: 3
+    max: 6
+    require: 1
+    exact: False
+    in_hand: True
+  - name: Back
+    min: 3
+    max: 9
+    require: 1
+    exact: True
+    in_hand: True
+  - name: Direct
+    min: 2
+    max: 2
+    require: 2
+    exact: True
+    in_hand: False
