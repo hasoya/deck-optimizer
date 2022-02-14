@@ -5,7 +5,7 @@ class DoptException:
     """Base class of all custom exceptions in dopt."""
 
 
-class NoSettingError(DoptException):
+class SettingsNotSetError(DoptException):
     """
     :param DoptException: _description_
     :type DoptException: _type_
