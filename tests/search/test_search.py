@@ -27,3 +27,5 @@ class TestSearcher:
         }
         assert empty_class.settings == ans
 
+    def test_gen_decks(self):
+        """Test Searcher._gen_decks."""
