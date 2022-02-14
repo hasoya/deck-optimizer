@@ -1,7 +1,7 @@
 num_hand: 5
 num_deck:
   min: 40
-  max: 60
+  max: 41
 condition:
   - name: Gamma
     min: 3

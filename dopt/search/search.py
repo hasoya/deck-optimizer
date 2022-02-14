@@ -6,6 +6,7 @@ from typing import Dict, Generator, Optional
 
 import yaml
 from dopt.card.deck import Deck
+from dopt.exceptions import NoDeckError, SettingsNotSetError
 from dopt.search.setting import SearchSetting
 
 
@@ -45,8 +46,6 @@ class Searcher:
 
     def _gen_decks(self) -> Generator[Deck, None, None]:
         """Generate candidate deck from settings."""
-        if not self.settings:
-            raise
         # Enumerate all conditions.
         all_conditions = []
         num_hand = self.settings["num_hand"]
@@ -73,15 +72,24 @@ class Searcher:
 
     def search(self) -> None:
         """Calculate the prob of all deck candidates."""
+        if not self.settings:
+            raise SettingsNotSetError("Use load_settings before")
+
         # For each deck, calculate prob of the ideal hand and save the result
         for deck in self._gen_decks():
             h = deck.gen_hands(self.settings["num_hand"])
             prob = h.calc_prob()
             self._save_prob(deck, prob)
 
+        if not self.best_deck:
+            raise NoDeckError("No deck is generated, review your config file.")
+
     def summary(self) -> None:
         """Show a report of a search result.
 
         :raises NotImplementedError: _description_
         """
+        if not self.settings:
+            raise SettingsNotSetError("Use load_settings before")
+
         raise NotImplementedError
