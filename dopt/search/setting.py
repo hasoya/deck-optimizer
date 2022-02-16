@@ -33,7 +33,7 @@ class SearchSetting:
             if self.exact:
                 return [in_hand]
             else:
-                return [n for n in range(in_hand, num_hand + 1)]
+                return [n for n in range(in_hand, min(in_deck, num_hand) + 1)]
         else:
             in_hand = min(in_deck - self.require, num_hand)
             if self.exact:

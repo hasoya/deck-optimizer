@@ -1,5 +1,4 @@
-"""[summary]
-"""
+"""Contain Searcher to find the best deck composition."""
 
 from itertools import product
 from pathlib import Path
@@ -7,11 +6,17 @@ from typing import Dict, Generator, Optional
 
 import yaml
 from dopt.card.deck import Deck
+from dopt.exceptions import NoDeckError, SettingsNotSetError
 from dopt.search.setting import SearchSetting
 
 
 class Searcher:
-    """Find the best number of the cards in deck by calculating probability of ideal hands.
+    """Find the best number of the cards in deck by calculating probability of the ideal hands.
+
+    :param settings: SearchSettings loaded from config yaml file.
+    :param best_deck: The best deck found by Searcher.search.
+    :param best_prob: The highest prob of the ideal hand given by the best deck.
+    :param result: A map {deck->prob} calculated by Searcher.search.
     """
 
     def __init__(self) -> None:
@@ -23,7 +28,7 @@ class Searcher:
     def load_settings(self, path: Path) -> None:
         """Load setting yaml file, and create CardCondition object.
 
-        :param path: [description]
+        :param path: A path to config yaml file.
         """
         # Load file.
         with open(path) as file:
@@ -66,12 +71,25 @@ class Searcher:
         self.result[deck] = prob
 
     def search(self) -> None:
-        """[summary]
-        """
+        """Calculate the prob of all deck candidates."""
+        if not self.settings:
+            raise SettingsNotSetError("Use load_settings before")
+
+        # For each deck, calculate prob of the ideal hand and save the result
         for deck in self._gen_decks():
             h = deck.gen_hands(self.settings["num_hand"])
             prob = h.calc_prob()
             self._save_prob(deck, prob)
 
+        if not self.best_deck:
+            raise NoDeckError("No deck is generated, review your config file.")
+
     def summary(self) -> None:
-        pass
+        """Show a report of a search result.
+
+        :raises NotImplementedError: _description_
+        """
+        if not self.settings:
+            raise SettingsNotSetError("Use load_settings before")
+
+        raise NotImplementedError
