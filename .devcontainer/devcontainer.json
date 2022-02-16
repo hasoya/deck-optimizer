@@ -49,6 +49,7 @@
 		"njpwerner.autodocstring",
 		"ms-azuretools.vscode-docker",
 		"redhat.vscode-yaml",
+		"github.vscode-pull-request-github",
 		"visualstudioexptteam.vscodeintellicode",
 	]
 }
