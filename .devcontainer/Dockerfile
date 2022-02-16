@@ -5,7 +5,7 @@ FROM python:3.10-slim-buster
 # See https://stackoverflow.com/a/47143497 for the meaning of `set -ex`.
 RUN set -ex \
     && apt-get update \
-    && apt-get install -y g++ git
+    && apt-get install -y git
 
 # Install library.
 RUN pip install -U pip
