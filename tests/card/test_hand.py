@@ -6,10 +6,12 @@ from pytest import approx
 class TestHand:
     def test_calc_each_prob(self) -> None:
         """Test Hand._calc_each_prob."""
-        p1 = Hand._calc_each_prob(40, 5, [6], tuple([1]))
+        h1 = Hand(40, 5, [6], [])
+        p1 = h1._calc_each_prob(tuple([1]))
         assert p1 == approx(0.42, 0.01)
 
-        p2 = Hand._calc_each_prob(40, 5, [6, 9], tuple([2, 1]))
+        h2 = Hand(40, 5, [6, 9], [])
+        p2 = h2._calc_each_prob(tuple([2, 1]))
         assert p2 == approx(0.0615, 0.001)
 
     def test_calc_prob(self) -> None:
