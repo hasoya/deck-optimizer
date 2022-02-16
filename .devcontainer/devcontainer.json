@@ -33,6 +33,10 @@
 		],
 		"python.linting.flake8Enabled": true,
 		"python.linting.mypyEnabled": true,
+		"python.sortImports.args": [
+			"-l 127",
+			"-p dopt"
+		],
 		"python.testing.pytestArgs": [
 			"tests"
 		],
@@ -45,6 +49,7 @@
 		"njpwerner.autodocstring",
 		"ms-azuretools.vscode-docker",
 		"redhat.vscode-yaml",
+		"github.vscode-pull-request-github",
 		"visualstudioexptteam.vscodeintellicode",
 	]
 }

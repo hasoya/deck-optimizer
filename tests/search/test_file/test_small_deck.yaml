@@ -1,0 +1,11 @@
+num_hand: 5
+num_deck:
+  min: 2
+  max: 2
+condition:
+  - name: A
+    min: 3
+    max: 3
+    require: 1
+    exact: False
+    in_hand: True

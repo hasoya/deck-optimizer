@@ -32,7 +32,7 @@ class TestSearchSetting:
         ans = [2]
         assert ans == exact_case._in_hand_candidates(3, 5)
 
-        ans = [3, 4, 5]
+        ans = [3]
         assert ans == non_exact_case._in_hand_candidates(3, 5)
 
         ans = [0]
@@ -47,7 +47,7 @@ class TestSearchSetting:
         ans = CardCondition("a", 3, [2])
         assert ans == exact_case._gen_card_cond(3, 5)
 
-        ans = CardCondition("b", 3, [3, 4, 5])
+        ans = CardCondition("b", 3, [3])
         assert ans == non_exact_case._gen_card_cond(3, 5)
 
         ans = CardCondition("c", 2, [0])
@@ -62,7 +62,7 @@ class TestSearchSetting:
         ans = [CardCondition("a", 2, [2]), CardCondition("a", 3, [2])]
         assert ans == exact_case.gen_card_conditions(5)
 
-        ans = [CardCondition("b", 3, [3, 4, 5]),  CardCondition("b", 4, [3, 4, 5]),
+        ans = [CardCondition("b", 3, [3]),  CardCondition("b", 4, [3, 4]),
                CardCondition("b", 5, [3, 4, 5])]
         assert ans == non_exact_case.gen_card_conditions(5)
 
