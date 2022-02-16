@@ -73,6 +73,13 @@ class TestSearcher:
         with pytest.raises(SettingsNotSetError):
             empty_class.search()
 
+        normal_sample.search()
+
+        cds = [CardCondition("Gamma", 3, [1, 2, 3]),
+               CardCondition("Driver", 1, [0])]
+        assert normal_sample.best_deck == Deck(40, cds)
+        assert normal_sample.best_prob == pytest.approx(0.302, 0.001)
+
     def test_summary(self, empty_class):
         """Test Seacher.summary."""
         with pytest.raises(SettingsNotSetError):
