@@ -1,7 +1,7 @@
 from dataclasses import dataclass
 from typing import List
 
-from dopt.card.card import CardCondition
+from dkopt.card.card import CardCondition
 
 
 @dataclass

@@ -3,8 +3,8 @@ from dataclasses import dataclass
 from itertools import product
 from typing import List
 
-from dopt.card.card import CardCondition
-from dopt.card.hand import Hand
+from dkopt.card.card import CardCondition
+from dkopt.card.hand import Hand
 
 
 @dataclass

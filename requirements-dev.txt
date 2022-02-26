@@ -3,3 +3,4 @@ flake8
 pytest
 autopep8
 types-PyYAML
+build

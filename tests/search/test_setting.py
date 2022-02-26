@@ -1,8 +1,8 @@
 """Test setting.py"""
 
 import pytest
-from dopt.card.card import CardCondition
-from dopt.search.setting import SearchSetting
+from dkopt.card.card import CardCondition
+from dkopt.search.setting import SearchSetting
 
 
 class TestSearchSetting:
