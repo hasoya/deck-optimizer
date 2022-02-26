@@ -5,9 +5,9 @@ from pathlib import Path
 from typing import Dict, Generator, Optional
 
 import yaml
-from dopt.card.deck import Deck
-from dopt.exceptions import NoDeckError, SettingsNotSetError
-from dopt.search.setting import SearchSetting
+from dkopt.card.deck import Deck
+from dkopt.exceptions import NoDeckError, SettingsNotSetError
+from dkopt.search.setting import SearchSetting
 
 
 class Searcher:

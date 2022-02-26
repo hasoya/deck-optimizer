@@ -3,11 +3,11 @@
 from pathlib import Path
 
 import pytest
-from dopt.card.card import CardCondition
-from dopt.card.deck import Deck
-from dopt.exceptions import SettingsNotSetError
-from dopt.search.search import Searcher
-from dopt.search.setting import SearchSetting
+from dkopt.card.card import CardCondition
+from dkopt.card.deck import Deck
+from dkopt.exceptions import SettingsNotSetError
+from dkopt.search.search import Searcher
+from dkopt.search.setting import SearchSetting
 
 
 class TestSearcher:

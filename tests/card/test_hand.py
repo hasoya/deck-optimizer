@@ -1,5 +1,5 @@
 """Test of hand.py"""
-from dopt.card.hand import Hand
+from dkopt.card.hand import Hand
 from pytest import approx
 
 

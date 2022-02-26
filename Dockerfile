@@ -2,7 +2,7 @@
 FROM python:3.10-slim-buster
 
 # Install library.
-RUN pip install -U pip
+RUN pip install -U pip==22.0.3
 COPY requirements.txt .
 RUN pip --no-cache-dir install -r requirements.txt
 
