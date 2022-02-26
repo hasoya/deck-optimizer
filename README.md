@@ -1,7 +1,10 @@
 # deck-optimizer
 
+[![PyPI version](https://badge.fury.io/py/dkopt.svg)](https://badge.fury.io/py/dkopt)
+[![Python Versions](https://img.shields.io/pypi/pyversions/dkopt.svg)](https://pypi.org/project/dkopt/)
 [![DockerPublish](https://github.com/hasoya/deck-optimizer/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/hasoya/deck-optimizer/actions/workflows/docker-publish.yml)
 [![pytest](https://github.com/hasoya/deck-optimizer/actions/workflows/python-app.yml/badge.svg)](https://github.com/hasoya/deck-optimizer/actions/workflows/python-app.yml)
+[![Upload Python Package](https://github.com/hasoya/deck-optimizer/actions/workflows/pypi-publish.yml/badge.svg)](https://github.com/hasoya/deck-optimizer/actions/workflows/pypi-publish.yml)
 
 **deck-optimizer** is a Python module to support TCG deck building especially Yu-Gi-Oh!. This module suggest the best combination of cards under given conditions.
 
@@ -46,4 +49,3 @@ The best deck
 The probability of the ideal hand
   30.21%
 ```
-
