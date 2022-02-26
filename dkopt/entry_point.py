@@ -1,11 +1,12 @@
 import argparse
 from pathlib import Path
 
-from dopt.search.search import Searcher
+from dkopt.search.search import Searcher
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Deck Optimizer")
     parser.add_argument("-f", "--file", type=Path, required=True)
+    parser.add_argument("-d", "--dump", action="store_true")
     args = parser.parse_args()
 
     s = Searcher()
@@ -18,5 +19,6 @@ if __name__ == "__main__":
     print("whose probability is")
     print(f"{s.best_prob * 100:.2f}%")
 
-"""     for d, p in s.result.items():
-        print(d, p) """
+    if args.dump:
+        for d, p in s.result.items():
+            print(d, p)

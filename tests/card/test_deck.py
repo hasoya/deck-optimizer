@@ -1,9 +1,9 @@
 """Test of deck.py"""
 from typing import List
 
-from dopt.card.card import CardCondition
-from dopt.card.deck import Deck
-from dopt.card.hand import Hand
+from dkopt.card.card import CardCondition
+from dkopt.card.deck import Deck
+from dkopt.card.hand import Hand
 
 
 class TestDeck:
