@@ -1,6 +1,6 @@
 # deck-optimizer
 
-[![PyPI version](https://img.shields.io/pypi/v/dkopt)](https://img.shields.io/pypi/v/dkopt)
+[![PyPI version](https://img.shields.io/pypi/v/dkopt)](https://pypi.org/project/dkopt/)
 [![Python Versions](https://img.shields.io/pypi/pyversions/dkopt.svg)](https://pypi.org/project/dkopt/)
 [![Docker Publish](https://github.com/hasoya/deck-optimizer/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/hasoya/deck-optimizer/actions/workflows/docker-publish.yml)
 [![pytest](https://github.com/hasoya/deck-optimizer/actions/workflows/python-app.yml/badge.svg)](https://github.com/hasoya/deck-optimizer/actions/workflows/python-app.yml)
