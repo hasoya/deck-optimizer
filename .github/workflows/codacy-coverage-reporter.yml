@@ -22,9 +22,9 @@ jobs:
         run: |
           coverage run dkopt/entry_point.py -f config/numeron.yaml
           coverage report
-          coverage xml
+          coverage xml -o cobertura.xml
       - name: Run codacy-coverage-reporter
         uses: codacy/codacy-coverage-reporter-action@v1
         with:
           project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
-          coverage-reports: coverage.xml
+          coverage-reports: cobertura.xml
