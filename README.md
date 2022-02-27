@@ -3,7 +3,7 @@
 [![PyPI version](https://img.shields.io/pypi/v/dkopt)](https://pypi.org/project/dkopt/)
 [![Python Versions](https://img.shields.io/pypi/pyversions/dkopt.svg)](https://pypi.org/project/dkopt/)
 [![Docker Publish](https://github.com/hasoya/deck-optimizer/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/hasoya/deck-optimizer/actions/workflows/docker-publish.yml)
-[![pytest](https://github.com/hasoya/deck-optimizer/actions/workflows/python-app.yml/badge.svg)](https://github.com/hasoya/deck-optimizer/actions/workflows/python-app.yml)
+[![pytest](https://github.com/hasoya/deck-optimizer/actions/workflows/run-pytest.yml/badge.svg)](https://github.com/hasoya/deck-optimizer/actions/workflows/run-pytest.yml)
 [![Upload Python Package](https://github.com/hasoya/deck-optimizer/actions/workflows/pypi-publish.yml/badge.svg)](https://github.com/hasoya/deck-optimizer/actions/workflows/pypi-publish.yml)
 [![Code Quality](https://app.codacy.com/project/badge/Grade/9cd9ee6c310947029719e7c22af67cb2)](https://www.codacy.com/gh/hasoya/deck-optimizer/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=hasoya/deck-optimizer&amp;utm_campaign=Badge_Grade)
 [![Coverage](https://app.codacy.com/project/badge/Coverage/9cd9ee6c310947029719e7c22af67cb2)](https://www.codacy.com/gh/hasoya/deck-optimizer/dashboard?utm_source=github.com&utm_medium=referral&utm_content=hasoya/deck-optimizer&utm_campaign=Badge_Coverage)
