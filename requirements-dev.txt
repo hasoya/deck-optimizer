@@ -1,6 +1,9 @@
-mypy
+black
+coverage
 flake8
+mypy
+pydocstyle
 pytest
-autopep8
 types-PyYAML
-build
+types-setuptools
+wheel

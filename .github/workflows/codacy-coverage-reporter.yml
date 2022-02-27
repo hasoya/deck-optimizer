@@ -1,0 +1,31 @@
+name: codacy-coverage-reporter
+
+on: ["push"]
+
+jobs:
+  codacy-coverage-reporter:
+    runs-on: ubuntu-latest
+    name: codacy-coverage-reporter
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v2
+        with:
+          python-version: "3.10"
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install flake8 coverage
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+          pip install -e .
+      - name: Make a coverage report
+        run: |
+          coverage run dkopt/entry_point.py -f config/numeron.yaml
+          coverage report
+          coverage xml -o cobertura.xml
+      - name: Run codacy-coverage-reporter
+        uses: codacy/codacy-coverage-reporter-action@v1
+        with:
+          project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
+          coverage-reports: cobertura.xml
+          language: Python
