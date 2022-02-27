@@ -15,6 +15,7 @@ class SearchSetting:
     :param exact: If True, the condition must be equal to require.
     :param in_hand: If True, the probability that cards are in hand.
     """
+
     name: str
     min: int
     max: int
@@ -48,8 +49,9 @@ class SearchSetting:
         :param in_deck: # of cards in a deck.
         :param num_hand: # of cards in a hand.
         """
-        return CardCondition(self.name, in_deck,
-                             self._in_hand_candidates(in_deck, num_hand))
+        return CardCondition(
+            self.name, in_deck, self._in_hand_candidates(in_deck, num_hand)
+        )
 
     def gen_card_conditions(self, num_hand: int) -> List[CardCondition]:
         """Return a list of CardCondition varying # of cards in a deck.

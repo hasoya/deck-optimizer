@@ -1,6 +1,7 @@
-mypy
+black
 flake8
+mypy
 pytest
-autopep8
 types-PyYAML
-build
+types-setuptools
+wheel

@@ -9,6 +9,7 @@
 		"autoDocstring.docstringFormat": "sphinx",
 		"autoDocstring.guessTypes": true,
 		"editor.codeActionsOnSave": {
+			"source.fixAll.markdownlint": true,
 			"source.organizeImports": true
 		},
 		"editor.formatOnSave": true,
@@ -18,14 +19,16 @@
 		"pylance.insidersChannel": "daily",
 		"python.analysis.typeCheckingMode": "basic",
 		"python.analysis.extraPaths": [
-			"./dopt"
+			"./dkopt"
 		],
 		"python.experiments.optInto": [
 			"All"
 		],
-		"python.formatting.autopep8Args": [
-			"--max-line-length=127"
+		"python.formatting.blackArgs": [
+			"--line-length",
+			"127"
 		],
+		"python.formatting.provider": "black",
 		"python.linting.pylintEnabled": false,
 		"python.linting.flake8Args": [
 			"--max-line-length=127",
@@ -35,21 +38,25 @@
 		"python.linting.mypyEnabled": true,
 		"python.sortImports.args": [
 			"-l 127",
-			"-p dopt"
+			"-p dkopt"
 		],
 		"python.testing.pytestArgs": [
 			"tests"
 		],
 		"python.testing.pytestEnabled": true,
-		"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
+		"[markdown]": {
+			"editor.formatOnSave": true
+		}
 	},
 	// Add the IDs of extensions you want installed when the container is created in the array below.
 	"extensions": [
+		"DavidAnson.vscode-markdownlint",
+		"github.vscode-pull-request-github",
+		"ms-azuretools.vscode-docker",
 		"ms-python.python",
 		"njpwerner.autodocstring",
-		"ms-azuretools.vscode-docker",
 		"redhat.vscode-yaml",
-		"github.vscode-pull-request-github",
 		"visualstudioexptteam.vscodeintellicode",
+		"ZainChen.json"
 	]
 }

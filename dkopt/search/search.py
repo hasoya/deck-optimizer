@@ -58,13 +58,14 @@ class Searcher:
             total_in_deck = sum([c.num_in_deck for c in cond_comb])
 
             # Deck iteration.
-            for dnum in range(self.settings["num_deck"]["min"],
-                              self.settings["num_deck"]["max"] + 1):
+            for dnum in range(
+                self.settings["num_deck"]["min"], self.settings["num_deck"]["max"] + 1
+            ):
                 if total_in_deck <= dnum:  # Check if total cards does not exceed.
                     yield Deck(dnum, list(cond_comb))
 
     def _save_prob(self, deck: Deck, prob: float) -> None:
-        """"Save the probability of ideal hand for each deck."""
+        """ "Save the probability of ideal hand for each deck."""
         if self.best_prob < prob:
             self.best_deck = deck
             self.best_prob = prob

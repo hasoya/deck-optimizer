@@ -8,10 +8,12 @@
 
 **deck-optimizer** is a Python module to support TCG deck building especially Yu-Gi-Oh!. This module suggest the best combination of cards under given conditions.
 
-# Dependency
+## Dependency
+
 Use [Docker](https://www.docker.com/) or see [requirements.txt](https://github.com/hasoya/deck-optimizer/blob/main/requirements.txt).
 
-# Usage
+## Usage
+
 Make config yaml file to describe the ideal hand. For example, if you want to draw at least one PSY-Framegear Gamma and keep PSY-Frame Driver in deck, your config file will be written as below.
 
 ```yaml:config.yaml
