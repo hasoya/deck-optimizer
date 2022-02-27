@@ -1,5 +1,6 @@
 # deck-optimizer
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/643e14c76ccb4d788c0671f519d9ef92)](https://app.codacy.com/gh/hasoya/deck-optimizer?utm_source=github.com&utm_medium=referral&utm_content=hasoya/deck-optimizer&utm_campaign=Badge_Grade_Settings)
 [![PyPI version](https://badge.fury.io/py/dkopt.svg)](https://badge.fury.io/py/dkopt)
 [![Python Versions](https://img.shields.io/pypi/pyversions/dkopt.svg)](https://pypi.org/project/dkopt/)
 [![DockerPublish](https://github.com/hasoya/deck-optimizer/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/hasoya/deck-optimizer/actions/workflows/docker-publish.yml)
