@@ -1,3 +1,4 @@
+"""This module includes class to calculate the probability of the ideal hand."""
 from dataclasses import dataclass
 from math import comb
 from typing import List, Tuple
@@ -12,6 +13,7 @@ class Hand:
 
         comb(d, h) * comb(n - d, m - h) / comb(n, m)
     """
+
     num_deck: int
     num_hand: int
     nums_in_deck: List[int]

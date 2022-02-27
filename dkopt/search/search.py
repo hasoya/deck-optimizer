@@ -20,6 +20,7 @@ class Searcher:
     """
 
     def __init__(self) -> None:
+        """Initialize class member veriables."""
         self.settings: Dict = {}
         self.best_deck: Optional[Deck] = None
         self.best_prob = 0.0
@@ -31,7 +32,7 @@ class Searcher:
         :param path: A path to config yaml file.
         """
         # Load file.
-        with open(path) as file:
+        with open(path, encoding="utf-8") as file:
             settings = yaml.safe_load(file)
 
         # Put Hand and Deck settings.
@@ -58,13 +59,12 @@ class Searcher:
             total_in_deck = sum([c.num_in_deck for c in cond_comb])
 
             # Deck iteration.
-            for dnum in range(self.settings["num_deck"]["min"],
-                              self.settings["num_deck"]["max"] + 1):
+            for dnum in range(self.settings["num_deck"]["min"], self.settings["num_deck"]["max"] + 1):
                 if total_in_deck <= dnum:  # Check if total cards does not exceed.
                     yield Deck(dnum, list(cond_comb))
 
     def _save_prob(self, deck: Deck, prob: float) -> None:
-        """"Save the probability of ideal hand for each deck."""
+        """Save the probability of ideal hand for each deck."""
         if self.best_prob < prob:
             self.best_deck = deck
             self.best_prob = prob
