@@ -9,7 +9,7 @@ with open(Path(__file__).parent / "README.md", encoding="utf-8") as f:
     long_description = f.read()
 
 
-with Path(Path(__file__).parent / "requirements.txt").open() as f:
+with open(Path(__file__).parent / "requirements.txt", encoding="utf-8") as f:
     requires = [str(r) for r in parse_requirements(f)]
 
 setup(
