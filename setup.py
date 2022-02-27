@@ -14,7 +14,7 @@ with open(Path(__file__).parent / "requirements.txt", encoding="utf-8") as f:
 
 setup(
     name="dkopt",
-    version="0.0.3",
+    version="0.0.4",
     description="deck-optimizer is a Python module to support TCG deck building.",
     long_description=long_description,
     long_description_content_type="text/markdown",
