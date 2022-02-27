@@ -10,6 +10,7 @@ from dkopt.card.hand import Hand
 @dataclass
 class Deck:
     """Stores the number of deck and CardCondition and generate hand pattern."""
+
     num_deck: int
     card_conditions: List[CardCondition]
 

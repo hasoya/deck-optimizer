@@ -12,6 +12,7 @@ class Hand:
 
         comb(d, h) * comb(n - d, m - h) / comb(n, m)
     """
+
     num_deck: int
     num_hand: int
     nums_in_deck: List[int]
