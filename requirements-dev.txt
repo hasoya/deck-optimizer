@@ -1,6 +1,7 @@
 black
 flake8
 mypy
+pydocstyle
 pytest
 types-PyYAML
 types-setuptools
