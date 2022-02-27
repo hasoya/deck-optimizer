@@ -1,3 +1,4 @@
+"""This module includes class to calculate the probability of the ideal hand."""
 from dataclasses import dataclass
 from math import comb
 from typing import List, Tuple
